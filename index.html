@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STEMP Poct · Equipos e insumos POCT veterinarios</title>
+  <meta name="description" content="Equipos de diagnóstico en el punto de atención (POCT) e insumos para clínicas y laboratorios veterinarios en Colombia.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/icono.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="aviso-prototipo">Prototipo (fase 1). Los pedidos y las cotizaciones sí llegan a los canales reales de STEMP.</div>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="marca" href="#inicio" aria-label="Inicio">
+        <img src="assets/logo.png" alt="STEMP">
+        <span data-sitio="nombre">STEMP Poct</span>
+      </a>
+      <nav class="nav">
+        <a class="ocultable" href="#equipos">Equipos</a>
+        <a class="ocultable" href="#insumos">Insumos</a>
+        <a class="ocultable" href="#como-pedir">Cómo pedir</a>
+        <button class="boton boton-primario boton-pequeno boton-carrito" type="button" data-abrir-pedido>
+          Pedido <span class="contador" id="contador">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="portada">
+      <div class="contenedor">
+        <div>
+          <div class="etiqueta">Diagnóstico en el punto de atención (POCT)</div>
+          <h1>Resultados en la consulta, con el paciente presente</h1>
+          <p class="lead">Equipos e insumos para clínicas y laboratorios veterinarios. STEMP responde por la venta, los insumos y el soporte.</p>
+          <div class="acciones">
+            <a class="boton boton-primario" href="#insumos">Pedir insumos</a>
+            <a class="boton boton-secundario" href="#equipos">Cotizar un equipo</a>
+          </div>
+        </div>
+        <div class="pilares">
+          <div class="pilar">
+            <div class="icono"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+            <div><h3>Decidir en la consulta</h3><p>Con el resultado a mano, el médico veterinario define el tratamiento antes de que el paciente se vaya.</p></div>
+          </div>
+          <div class="pilar">
+            <div class="icono"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg></div>
+            <div><h3>Un solo proveedor</h3><p>Su equipo, sus insumos y su soporte, con STEMP.</p></div>
+          </div>
+          <div class="pilar">
+            <div class="icono"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5h11l5 5v9z"/><path d="M8 13h8M8 16h5"/></svg></div>
+            <div><h3>Cifras con respaldo</h3><p>Los datos de desempeño que publicamos salen de la ficha técnica del fabricante.</p></div>
+          </div>
+          <div class="pilar">
+            <div class="icono"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 4l5 3-5 3"/></svg></div>
+            <div><h3>Formación del equipo clínico</h3><p>Capacitamos a su personal en el uso del equipo.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="equipos">
+      <div class="contenedor">
+        <div class="encabezado-seccion">
+          <div class="etiqueta">Equipos</div>
+          <h2>Equipos para su clínica o laboratorio</h2>
+          <p>Pídanos una cotización o una demostración. Le respondemos por WhatsApp o por correo.</p>
+        </div>
+        <div class="equipos" id="lista-equipos"></div>
+      </div>
+    </section>
+
+    <section id="insumos" class="seccion-gris">
+      <div class="contenedor">
+        <div class="encabezado-seccion">
+          <div class="etiqueta">Reactivos e insumos</div>
+          <h2>Arme su pedido</h2>
+          <p>Elija los productos y las cantidades, y envíe el pedido por WhatsApp o por correo. STEMP le confirma precio, disponibilidad y envío.</p>
+        </div>
+        <div class="filtros" id="filtros" role="group" aria-label="Filtrar por línea"></div>
+        <input class="buscador" id="buscador" type="search" placeholder="Buscar por nombre o código (por ejemplo, SDMA, T4, 14022)" aria-label="Buscar producto">
+        <div class="detalle-linea" id="detalle-linea" hidden></div>
+        <div class="lista" id="lista-insumos"></div>
+      </div>
+    </section>
+
+    <section id="como-pedir">
+      <div class="contenedor">
+        <div class="encabezado-seccion">
+          <div class="etiqueta">Cómo pedir</div>
+          <h2>Cuatro pasos, sin registrarse</h2>
+        </div>
+        <div class="pasos">
+          <div class="paso"><h3>Elija</h3><p>Agregue al pedido los productos y las cantidades que necesita.</p></div>
+          <div class="paso"><h3>Identifíquese</h3><p>Escriba los datos de su clínica o laboratorio.</p></div>
+          <div class="paso"><h3>Envíe</h3><p>Mande el pedido por WhatsApp o por correo, ya redactado.</p></div>
+          <div class="paso"><h3>Confirmamos</h3><p>STEMP le responde con el precio, la disponibilidad y la fecha de entrega.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="banda">
+      <div class="contenedor">
+        <div>
+          <h2>¿Necesita ayuda para elegir?</h2>
+          <p>Escríbanos y le ayudamos a escoger el equipo y las pruebas para su clínica.</p>
+        </div>
+        <a class="boton boton-claro" id="whatsapp-asesoria" href="#" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div>
+        <img src="assets/logo-negativo.png" alt="STEMP">
+        <p><span data-sitio="nombre">STEMP Poct</span> es una línea de <span data-sitio="responsable">Soluciones y Tecnologías Empresariales SAS</span> (STEMP), NIT <span data-sitio="nit">900.308.305-2</span>.</p>
+        <p class="nota" style="color:inherit">Prototipo de la fase 1, octubre de 2026.</p>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul>
+          <li>WhatsApp: <a id="pie-whatsapp" href="#" target="_blank" rel="noopener">317 517 4344</a></li>
+          <li>Correo: <a id="pie-correo" href="mailto:contacto@stemp.company">contacto@stemp.company</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Información</h3>
+        <ul>
+          <li><a href="politica-datos.html">Política de tratamiento de datos</a></li>
+          <li><a id="pie-grupo" href="#"><span data-sitio="respaldo">Parte de Team 3</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Panel del pedido -->
+  <div class="velo" id="velo"></div>
+  <aside class="panel" id="panel-pedido" aria-label="Pedido" aria-hidden="true">
+    <div class="panel-cabeza">
+      <h2>Su pedido</h2>
+      <button class="cerrar" type="button" data-cerrar aria-label="Cerrar">×</button>
+    </div>
+    <div class="panel-cuerpo">
+      <div id="lineas-pedido"></div>
+      <form id="form-pedido" novalidate>
+        <h3 style="margin-top:18px">Datos de su clínica o laboratorio</h3>
+        <div class="campo"><label for="p-clinica">Clínica o laboratorio *</label><input id="p-clinica" name="clinica" required autocomplete="organization"></div>
+        <div class="dos">
+          <div class="campo"><label for="p-nit">NIT</label><input id="p-nit" name="nit" inputmode="numeric"></div>
+          <div class="campo"><label for="p-ciudad">Ciudad *</label><select id="p-ciudad" name="ciudad" required></select></div>
+        </div>
+        <div class="campo"><label for="p-contacto">Persona de contacto *</label><input id="p-contacto" name="contacto" required autocomplete="name"></div>
+        <div class="dos">
+          <div class="campo"><label for="p-telefono">Teléfono *</label><input id="p-telefono" name="telefono" required inputmode="tel" autocomplete="tel"></div>
+          <div class="campo"><label for="p-correo">Correo</label><input id="p-correo" name="correo" type="email" autocomplete="email"></div>
+        </div>
+        <div class="campo"><label for="p-notas">Notas para STEMP</label><textarea id="p-notas" name="notas" rows="2" placeholder="Dirección de entrega, horario, factura a nombre de…"></textarea></div>
+        <label class="autorizacion"><input type="checkbox" name="autoriza" required> <span>Autorizo a STEMP a tratar mis datos para atender este pedido, según la <a href="politica-datos.html" target="_blank">política de tratamiento de datos</a>.</span></label>
+        <div class="error" id="error-pedido" role="alert"></div>
+      </form>
+    </div>
+    <div class="panel-pie">
+      <button class="boton boton-whatsapp" type="button" data-enviar="whatsapp">Enviar pedido por WhatsApp</button>
+      <button class="boton boton-secundario" type="button" data-enviar="correo">Enviar por correo</button>
+      <p class="nota">Este sitio no guarda sus datos: el pedido sale redactado en su WhatsApp o en su correo, y usted decide si lo envía.</p>
+    </div>
+  </aside>
+
+  <!-- Ventana de cotización o demostración -->
+  <div class="ventana" id="ventana-cotizacion" aria-hidden="true">
+    <div class="caja" role="dialog" aria-labelledby="titulo-cotizacion">
+      <div class="panel-cabeza" style="padding:0 0 12px;border:0">
+        <h2 id="titulo-cotizacion" style="font-size:1.25rem;margin:0">Cotización o demostración</h2>
+        <button class="cerrar" type="button" data-cerrar aria-label="Cerrar">×</button>
+      </div>
+      <form id="form-cotizacion" novalidate>
+        <div class="campo"><label for="c-equipo">Equipo *</label><select id="c-equipo" name="equipo" required></select></div>
+        <div class="campo"><label for="c-interes">Me interesa *</label>
+          <select id="c-interes" name="interes" required>
+            <option>Una cotización</option>
+            <option>Una demostración</option>
+            <option>Cotización y demostración</option>
+          </select>
+        </div>
+        <div class="campo"><label for="c-clinica">Clínica o laboratorio *</label><input id="c-clinica" name="clinica" required autocomplete="organization"></div>
+        <div class="dos">
+          <div class="campo"><label for="c-contacto">Persona de contacto *</label><input id="c-contacto" name="contacto" required autocomplete="name"></div>
+          <div class="campo"><label for="c-ciudad">Ciudad *</label><select id="c-ciudad" name="ciudad" required></select></div>
+        </div>
+        <div class="dos">
+          <div class="campo"><label for="c-telefono">Teléfono *</label><input id="c-telefono" name="telefono" required inputmode="tel" autocomplete="tel"></div>
+          <div class="campo"><label for="c-correo">Correo</label><input id="c-correo" name="correo" type="email" autocomplete="email"></div>
+        </div>
+        <div class="campo"><label for="c-mensaje">¿Qué pruebas hace hoy o cuántos pacientes atiende al mes?</label><textarea id="c-mensaje" name="mensaje" rows="2"></textarea></div>
+        <label class="autorizacion"><input type="checkbox" name="autoriza" required> <span>Autorizo a STEMP a tratar mis datos para atender esta solicitud, según la <a href="politica-datos.html" target="_blank">política de tratamiento de datos</a>.</span></label>
+        <div class="error" id="error-cotizacion" role="alert"></div>
+        <div class="acciones" style="margin-top:8px">
+          <button class="boton boton-whatsapp" type="button" data-cotizar="whatsapp">Enviar por WhatsApp</button>
+          <button class="boton boton-secundario" type="button" data-cotizar="correo">Enviar por correo</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="aviso-flotante" id="aviso" role="status"></div>
+
+  <script src="assets/config.js"></script>
+  <script src="assets/productos.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
