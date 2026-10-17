@@ -38,7 +38,7 @@
         <div>
           <div class="etiqueta">Diagnóstico en el punto de atención (POCT)</div>
           <h1>Resultados en la consulta, con el paciente presente</h1>
-          <p class="lead">Equipos e insumos para clínicas y laboratorios veterinarios. STEMP responde por la venta, los insumos y el soporte.</p>
+          <p class="lead">Equipos e insumos para clínicas y laboratorios veterinarios de todo el país. STEMP responde por la venta, los insumos y el soporte.</p>
           <div class="acciones">
             <a class="boton boton-primario" href="#insumos">Pedir insumos</a>
             <a class="boton boton-secundario" href="#equipos">Cotizar un equipo</a>
@@ -81,7 +81,7 @@
         <div class="encabezado-seccion">
           <div class="etiqueta">Reactivos e insumos</div>
           <h2>Arme su pedido</h2>
-          <p>Elija los productos y las cantidades, y envíe el pedido por WhatsApp o por correo. STEMP le confirma precio, disponibilidad y envío.</p>
+          <p>Elija los productos y las cantidades, y envíe el pedido por WhatsApp o por correo. Despachamos a todo el país; STEMP le confirma precio, disponibilidad y envío.</p>
         </div>
         <div class="filtros" id="filtros" role="group" aria-label="Filtrar por línea"></div>
         <input class="buscador" id="buscador" type="search" placeholder="Buscar por nombre o código (por ejemplo, SDMA, T4, 14022)" aria-label="Buscar producto">
@@ -120,7 +120,7 @@
     <div class="contenedor">
       <div>
         <img src="assets/logo-negativo.png" alt="STEMP">
-        <p><span data-sitio="nombre">STEMP Poct</span> es una línea de <span data-sitio="responsable">Soluciones y Tecnologías Empresariales SAS</span> (STEMP), NIT <span data-sitio="nit">900.308.305-2</span>.</p>
+        <p><span data-sitio="nombre">STEMP Poct</span> es una línea de <span data-sitio="responsable">Soluciones y Tecnologías Empresariales SAS</span>, NIT <span data-sitio="nit">900.308.305-2</span>.</p>
         <p class="nota" style="color:inherit">Prototipo de la fase 1, octubre de 2026.</p>
       </div>
       <div>
@@ -128,6 +128,7 @@
         <ul>
           <li>WhatsApp: <a id="pie-whatsapp" href="#" target="_blank" rel="noopener">317 517 4344</a></li>
           <li>Correo: <a id="pie-correo" href="mailto:contacto@stemp.company">contacto@stemp.company</a></li>
+          <li>Notificaciones judiciales: <a href="mailto:notificacionesjudiciales@stemp.company">notificacionesjudiciales@stemp.company</a></li>
         </ul>
       </div>
       <div>
@@ -154,7 +155,7 @@
         <div class="campo"><label for="p-clinica">Clínica o laboratorio *</label><input id="p-clinica" name="clinica" required autocomplete="organization"></div>
         <div class="dos">
           <div class="campo"><label for="p-nit">NIT</label><input id="p-nit" name="nit" inputmode="numeric"></div>
-          <div class="campo"><label for="p-ciudad">Ciudad *</label><select id="p-ciudad" name="ciudad" required></select></div>
+          <div class="campo"><label for="p-ciudad">Ciudad *</label><input id="p-ciudad" name="ciudad" required autocomplete="address-level2" placeholder="Ciudad o municipio"></div>
         </div>
         <div class="campo"><label for="p-contacto">Persona de contacto *</label><input id="p-contacto" name="contacto" required autocomplete="name"></div>
         <div class="dos">
@@ -162,7 +163,7 @@
           <div class="campo"><label for="p-correo">Correo</label><input id="p-correo" name="correo" type="email" autocomplete="email"></div>
         </div>
         <div class="campo"><label for="p-notas">Notas para STEMP</label><textarea id="p-notas" name="notas" rows="2" placeholder="Dirección de entrega, horario, factura a nombre de…"></textarea></div>
-        <label class="autorizacion"><input type="checkbox" name="autoriza" required> <span>Autorizo a STEMP a tratar mis datos para atender este pedido, según la <a href="politica-datos.html" target="_blank">política de tratamiento de datos</a>.</span></label>
+        <label class="autorizacion"><input type="checkbox" name="autoriza" required> <span>Autorizo el tratamiento de mis datos para atender este pedido, según la <a href="politica-datos.html" target="_blank">política de tratamiento de datos</a>.</span></label>
         <div class="error" id="error-pedido" role="alert"></div>
       </form>
     </div>
@@ -192,14 +193,14 @@
         <div class="campo"><label for="c-clinica">Clínica o laboratorio *</label><input id="c-clinica" name="clinica" required autocomplete="organization"></div>
         <div class="dos">
           <div class="campo"><label for="c-contacto">Persona de contacto *</label><input id="c-contacto" name="contacto" required autocomplete="name"></div>
-          <div class="campo"><label for="c-ciudad">Ciudad *</label><select id="c-ciudad" name="ciudad" required></select></div>
+          <div class="campo"><label for="c-ciudad">Ciudad *</label><input id="c-ciudad" name="ciudad" required autocomplete="address-level2" placeholder="Ciudad o municipio"></div>
         </div>
         <div class="dos">
           <div class="campo"><label for="c-telefono">Teléfono *</label><input id="c-telefono" name="telefono" required inputmode="tel" autocomplete="tel"></div>
           <div class="campo"><label for="c-correo">Correo</label><input id="c-correo" name="correo" type="email" autocomplete="email"></div>
         </div>
         <div class="campo"><label for="c-mensaje">¿Qué pruebas hace hoy o cuántos pacientes atiende al mes?</label><textarea id="c-mensaje" name="mensaje" rows="2"></textarea></div>
-        <label class="autorizacion"><input type="checkbox" name="autoriza" required> <span>Autorizo a STEMP a tratar mis datos para atender esta solicitud, según la <a href="politica-datos.html" target="_blank">política de tratamiento de datos</a>.</span></label>
+        <label class="autorizacion"><input type="checkbox" name="autoriza" required> <span>Autorizo el tratamiento de mis datos para atender esta solicitud, según la <a href="politica-datos.html" target="_blank">política de tratamiento de datos</a>.</span></label>
         <div class="error" id="error-cotizacion" role="alert"></div>
         <div class="acciones" style="margin-top:8px">
           <button class="boton boton-whatsapp" type="button" data-cotizar="whatsapp">Enviar por WhatsApp</button>

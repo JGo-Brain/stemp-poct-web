@@ -18,7 +18,6 @@
   $("#pie-correo").textContent = S.correo;
   $("#pie-grupo").href = S.sitioGrupo;
   $("#whatsapp-asesoria").href = waBase + "?text=" + encodeURIComponent("Hola, " + S.nombre + ". Quisiera asesoría para elegir equipos o pruebas para mi clínica.");
-  $$("#p-ciudad, #c-ciudad").forEach(sel => { sel.innerHTML = '<option value="">Seleccione…</option>' + S.ciudades.map(c => `<option>${c}</option>`).join(""); });
 
   const escapar = t => String(t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const aviso = texto => { const a = $("#aviso"); a.textContent = texto; a.classList.add("visible"); clearTimeout(aviso.t); aviso.t = setTimeout(() => a.classList.remove("visible"), 1800); };
@@ -164,7 +163,7 @@
     if (!revisar(f, err)) return;
     const lineas = codigos.map(c => { const p = porCodigo(c); return "• " + pedido[c] + " × " + p.empaque + " · " + p.nombre + (p.sinCodigo ? "" : " [" + p.codigo + "]"); });
     const texto = ["Hola, " + S.nombre + ". Quiero hacer este pedido:", ""].concat(lineas, [""], datosCliente(f),
-      valor(f, "notas") ? ["Notas: " + valor(f, "notas")] : [], ["", "Autorizo el tratamiento de mis datos según la política de STEMP."]).join("\n");
+      valor(f, "notas") ? ["Notas: " + valor(f, "notas")] : [], ["", "Autorizo el tratamiento de mis datos según la política de tratamiento de datos de " + S.nombre + "."]).join("\n");
     enviar(b.dataset.enviar, "Pedido de insumos · " + valor(f, "clinica"), texto);
   }));
 
@@ -181,7 +180,7 @@
     const eq = porCodigo(valor(f, "equipo"));
     const texto = ["Hola, " + S.nombre + ". Me interesa " + valor(f, "interes").toLowerCase() + " del equipo:", "• " + eq.nombre + " [" + eq.codigo + "]", ""]
       .concat(datosCliente(f), valor(f, "mensaje") ? ["Sobre mi clínica: " + valor(f, "mensaje")] : [],
-        ["", "Autorizo el tratamiento de mis datos según la política de STEMP."]).join("\n");
+        ["", "Autorizo el tratamiento de mis datos según la política de tratamiento de datos de " + S.nombre + "."]).join("\n");
     enviar(b.dataset.cotizar, valor(f, "interes") + " · " + eq.nombre, texto);
   }));
 })();

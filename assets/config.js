@@ -9,6 +9,7 @@ window.SITIO = {
   whatsapp: "573175174344",                   // pedidos y cotizaciones (canal de STEMP en la fase 1)
   whatsappVisible: "317 517 4344",
   correo: "contacto@stemp.company",
-  ciudades: ["Bogotá", "Cartagena", "Otra ciudad"],
+  notificaciones: "notificacionesjudiciales@stemp.company",
+  cobertura: "Todo el país",
   sitioGrupo: "https://jgo-brain.github.io/team3-web/"
 };
