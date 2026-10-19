@@ -12,6 +12,9 @@ Catálogo de equipos e insumos POCT para clínicas y laboratorios veterinarios. 
 - Nombres de fabricantes (Healvet, Human) sin logos ni fotos: falta su autorización escrita (brand kit).
 - Verificar el registro sanitario de cada producto antes de publicar el sitio definitivo.
 
+## Fotos
+De Pexels (licencia de Pexels: uso comercial gratis, sin atribución obligatoria), optimizadas en `assets/img/`. Número de cada foto en pexels.com: consulta-ecografia (6235649), microscopio (13365432), tubos-fondo-claro (4047146), tubos-fondo-claro-2 (4047150). Sin logos de fabricantes ni datos de pacientes.
+
 ## Reglas de escisión
 1. Sitio, repositorio y dominio propios; sin código compartido con los otros sitios (si se parecen, es por copia).
 2. Canales propios para pedidos y cotizaciones, en la configuración del sitio.

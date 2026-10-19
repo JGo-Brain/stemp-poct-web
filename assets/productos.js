@@ -3,13 +3,13 @@
 // Sin pruebas de Biogal hasta tener sus estudios de validación.
 
 window.LINEAS = [
-  { id: "ifa", nombre: "Inmunofluorescencia", equipo: "Healvet IA3000",
+  { id: "ifa", nombre: "Inmunofluorescencia", equipo: "Healvet IA3000", foto: "assets/img/tubos-fondo-claro.jpg",
     detalle: "Analizador cuantitativo con tecnología inmune seca, libre de mantenimiento. Según la ficha del fabricante: prueba en 3 a 15 minutos, pantalla táctil de 7 pulgadas, impresora incorporada y reactivos con vigencia de hasta 24 meses." },
-  { id: "coa", nombre: "Coagulación", equipo: "Healvet COA7000",
+  { id: "coa", nombre: "Coagulación", equipo: "Healvet COA7000", foto: "assets/img/tubos-fondo-claro-2.jpg",
     detalle: "Coagulación óptica, libre de mantenimiento. Según la ficha del fabricante: pantalla táctil de 7 pulgadas, impresora incorporada y reactivos con vigencia de 18 meses." },
   { id: "pr", nombre: "Pruebas rápidas", equipo: "Sin equipo",
     detalle: "Inmunocromatografía cualitativa. Según el fabricante: resultado en 2 a 10 minutos, sin equipo adicional y con vigencia de hasta 24 meses." },
-  { id: "mic", nombre: "Microscopía", equipo: "Human HumaScope",
+  { id: "mic", nombre: "Microscopía", equipo: "Human HumaScope", foto: "assets/img/microscopio.jpg",
     detalle: "Sistema óptico acromático con revestimiento antifúngico y antirrayaduras: binocular con giro de 360°, ocular 10x/18 mm, aumentos de 4x a 100x e iluminación LED ajustable." },
   { id: "flu", nombre: "Manejo de fluidos", equipo: "Human Humapette",
     detalle: "Pipetas de volumen ajustable, ergonómicas y esterilizables en autoclave, con sus puntas." },

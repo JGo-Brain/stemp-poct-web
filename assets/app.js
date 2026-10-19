@@ -28,12 +28,16 @@
   const equipos = PRODUCTOS.filter(p => p.tipo === "equipo");
   $("#lista-equipos").innerHTML = equipos.map(p => {
     const l = lineaDe(p.linea);
-    return `<article class="tarjeta">
-      <div class="ilustracion">${p.linea === "mic" ? iconoMicro : iconoEquipo}</div>
-      <div class="linea">${escapar(l.nombre)}</div>
-      <h3>${escapar(p.nombre)}</h3>
-      <p>${escapar(l.detalle)}</p>
-      <div class="acciones"><button class="boton boton-primario boton-pequeno" type="button" data-cotizacion="${p.codigo}">Cotización o demostración</button></div>
+    const visual = l.foto ? `<div class="foto-equipo"><img src="${l.foto}" alt="" loading="lazy"></div>`
+      : `<div class="ilustracion">${p.linea === "mic" ? iconoMicro : iconoEquipo}</div>`;
+    return `<article class="tarjeta revelar">
+      ${visual}
+      <div class="cuerpo">
+        <div class="linea">${escapar(l.nombre)}</div>
+        <h3>${escapar(p.nombre)}</h3>
+        <p>${escapar(l.detalle)}</p>
+        <div class="acciones"><button class="boton boton-primario boton-pequeno" type="button" data-cotizacion="${p.codigo}">Cotización o demostración</button></div>
+      </div>
     </article>`;
   }).join("");
   $("#c-equipo").innerHTML = equipos.map(p => `<option value="${p.codigo}">${escapar(p.nombre)}</option>`).join("");
@@ -183,4 +187,8 @@
         ["", "Autorizo el tratamiento de mis datos según la política de tratamiento de datos de " + S.nombre + "."]).join("\n");
     enviar(b.dataset.cotizar, valor(f, "interes") + " · " + eq.nombre, texto);
   }));
+
+  // ---------- Aparición suave al desplazarse ----------
+  const obs = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); obs.unobserve(e.target); } }), { threshold: .12 }) : null;
+  $$(".revelar").forEach(el => obs ? obs.observe(el) : el.classList.add("visible"));
 })();
