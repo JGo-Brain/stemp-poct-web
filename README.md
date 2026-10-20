@@ -20,7 +20,7 @@ De Pexels (licencia de Pexels: uso comercial gratis, sin atribución obligatoria
 2. Canales propios para pedidos y cotizaciones, en la configuración del sitio.
 3. Política de tratamiento de datos y casilla de autorización propias (Ley 1581 de 2012). Hoy el responsable es STEMP.
 4. Pagos y factura electrónica (fase 2) a nombre de quien vende.
-5. Marca propia; «Parte de Team 3» es un respaldo que se quita dejando vacío un dato de la configuración.
+5. Marca propia; «Parte de Teamtres» es un respaldo que se quita dejando vacío un dato de la configuración.
 6. Plataformas compartidas (Plataforma STEMP, Resultados Lab), enlazadas desde la configuración.
 
 ## Cómo se publica
