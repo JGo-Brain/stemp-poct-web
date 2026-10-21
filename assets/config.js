@@ -1,7 +1,7 @@
 // Configuración del sitio. Regla de escisión: nombre, canales y respaldo viven aquí y solo aquí.
 window.SITIO = {
   nombre: "STEMP Poct",                       // nombre propio de la línea: se cambia solo aquí
-  descriptor: "Equipos e insumos POCT para clínicas y laboratorios veterinarios",
+  descriptor: "Equipos e insumos POCT para clínicas veterinarias",
   grupo: "Teamtres",                            // nombre público del grupo
   respaldo: "Parte de Teamtres",                // dejar "" para quitar el respaldo del grupo
   responsable: "Soluciones y Tecnologías Empresariales SAS",
